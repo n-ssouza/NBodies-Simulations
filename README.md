@@ -1,2 +1,5 @@
 # NBodies-Simulations
-NBodies simulations with Python, visualizations using MatPlotLib and FFMPEG. 
+NBodies simulations with visualizations.
+
+# Dependencies
+Python 3, Numpy, MatPlotLib, FFMPEG
