@@ -1,0 +1,10 @@
+#Solar System - Rocky planets and Sun
+#Idealized data - Circular orbits
+#Data: 13/01/2020
+#
+#initial_position_x (AU)      initial_position_y (AU)       initial_position_z (AU)
+  	0.                             0.                            0.                  
+ 	0.4                            0.                            0.                  
+ 	0.7                            0.                            0.                  
+  	1.0                            0.                            0.                  
+ 	1.5                            0.                            0.                  

@@ -1,0 +1,33 @@
+video1 - Dados idealizados - Primeira tentativa, cada iteração sobre t correspondia à 1 frame, 5000 e poucos frames. Resultados bem estranhos, a força aparenta, por algum motivo, ser repulsiva (?). Há também algo de errado ou com as forças ou com as velocidades. As bolinhas que representam cada astro estão muito grandes e tornam a visualização um pouco poluída, ainda preciso aprender a deixá-las menores, a mudar o tamanho dos pontos um em relação ao outro (se possível, utilizando somente um array um para as posições de todos os corpos em um determinado eixo).
+
+video2 - Dados reais - Adicinei um if para que fosse salvo 1 arquivo txt (correspondente a 1 frame) a cada 1000 iterações. Como dt = 0.001 e t em dias, temos 1 frame por dia. Os problemas persistem, essa correção foi só para resolver a não necessidade de ter um 1 frame para cada iteração do tempo, o que torna a renderização demorada.
+
+vide3 - Dados Reais - Estranhei o comportamento, principalmente de mercúrio, aparentemente repulsivo dos planetas. Suspeitei que devesse haver algum sinal negativo a mais em algum lugar do cálculo da função grav_force, que calcula a força gravitacional entre 2 determinados corpos. Então, tirei o sinal negativo da frente da expressão da magnitude da força gravitacional. De fato, agora não há mais essa impressão de repulsão. Ainda assim, os planetas aparentam estar muito rápidos, possivelmente algo de errado com as velocidades iniciais, inconsistência com as unidades ou quem sabe o valor da constante gravitacional está errado.
+
+video4 - Dados reais - Refiz as constas para as conversões de unidades de G, obtive um resultado diferente do anterior, espero que desta vez esteja correto. À título de checagem, adicionei novamente o sinal negativo na frente da magnitude da força gravitacional só para ter certeza de que o problema não está estava só no seu valor. Pelo visto este sinal realmente não deve ficar lá, o corpotamento repulsivo apareceu novamente.
+
+video5 - Dados reais - Repeti o video4, porém desta vez sem o famigerado sinal negativo gerador da repulsão. Deu certo, mas as velocidades iniciais aparentam estar excessivas ainda, indicando um problema nos dados iniciais, alguma confusão com as unidades. Ou isso, ou há algum outro problema no cáculo da força, ou no processamento das dados. As hipóteses serão testas nessa ordem.
+
+video6 - Dados idealizados - Para checar a primeira hipótese, se há algum erro ou incoerência com as unidades utilizadas, tentei usar novamente os dados idaelizados, mas dessa vez com o sinal negativo corrigido bem como o valor de G. As velocidades continuam muito altas. O problema está ou no cálculo da força ou no processamento dos arrays.
+
+Obs.: Logicamente o sinal tornava a força repulsiva, a expressão tratava da MAGNITUDE. A informação da direção onde a força é aplicada já está contida no vetor distância entre os dois corpos.
+
+video7 - Dados Idealizados - Após revisar a definição da função responsável por calcular a força gravitacional entre dois objetos, e seu uso no código, percebi que houve um "equívoco vetorial". Eu estava atribuindo a força de um objeto a outro. Afinal, quando calcula-se um vetor distância entre dois objetos, a ordem na subtração é o que determina a direção do vetor; eu não prestei muita atenção a isso. Também revisei o resto do código, o processamento e manejo dos arrays e suas informações, tudo aparentou estar ok. Bom, infelizmente aconteceram coisas terríveis kkkkkkkkkk (desespero)
+A força voltou ser repulsiva... Claramento isso tem a ver com a mudança da ordem do índices dos arrays na hora de calcular a força de um objeto em outro (pelo motivo explicado acima). Fiz uma confusão vetorial na minha mente. Ah, as velocidas continuam estranhamente altas (ou as forças estranhamente fracas).
+
+video8 - Dados reais - Dados reais - Mudei novamente o sinal na força gravitacional, e funcionou. As velocidades (ou forças) continuam estranhas.
+
+video9 - Dados reais - Sinceramente, nem lembro o que eu tentei mudar pra corrigir kkkkkkkkk cansei e fui dormir.
+
+video10 - Dados idealizados - Achei que diminuir o valor de dt fosse fazer com que o cálculo da força fosse mais preciso, e dessa vez preciso o suficiente, de modo que o valor da força varia da maneira adequada conforme as distâncias variam, corrigindo os problemas. Não funcionou.
+
+video11 - Dados reais - Revisei as unidades e valores do arquivo com as condições iniciais do cenário real. Acho que também mexi no valor de G, só para ver a diferença que faria e ter uma pista sobre a origem dessas anomalias kkkkkkk. Ocorreu um desastre, acho que não consigo (ainda) abstrair nenhum significado desse vídeo.
+
+video12 - Dados idealizados - Mexi bruscamente no valor de G, somente pelo mérito de ter certeza absoluta que o erro não está ali. Realmente, o vídeo ficou bem mais estranho e lento, como esperado. Acredito que o valor para G esteja definitivamente correto.
+
+video13 - MEU DEUS COMO EU NÃO PERCEBI ANTES QUE NÃO SEI PROGRAMAÇÃO ORIENTADA A OBJETO. Mudei bastante a estrutura do loop, obviamente não é necessário criar novos objetos a cada iteração, a mágica é justamente eles poderem ser criados somente uma vez, a partir daí seus atributos vão sendo atualizados.
+
+video14 - Dados idealizados - Meu deus que alívio, finalmente encontrei o erro, estava nos loops responsáveis pelo cálculo da força resultante. Para cada astros_i, é necessário reiniciar o array resultant_force_on_i. Enfim, deu tudo certo.
+
+video15 - Dados reais - Como esperado, agora tudo também deu certo para os dados reais. 
+
