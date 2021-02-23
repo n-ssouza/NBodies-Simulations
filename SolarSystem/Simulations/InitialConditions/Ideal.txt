@@ -1,0 +1,10 @@
+#Solar System - Rocky planets and Sun
+#Idealized data - Circular orbits
+#Data: 13/01/2020
+#
+#i   mass (Mearth)     initial_position_x (AU)      initial_position_y (AU)      initial_position_z (AU)      initial_velocity_x (AU/day)  initial_velocity_y (AU/day)  initial_velocity_z (AU/day)
+0      332946                0.                             0.                            0.                            0.                      0.                                0.
+1      0.055                 0.4                            0.                            0.                            0.                      2.71728912e-02                    0.
+2      0.815                 0.7                            0.                            0.                            0.                      2.05407750e-02                    0.
+3      1.000                 1.0                            0.                            0.                            0.                      1.71856454e-02                    0.
+4      0.107                 1.5                            0.                            0.                            0.                      1.40320207e-02                    0.

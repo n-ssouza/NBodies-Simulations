@@ -1,0 +1,10 @@
+#Real data from NASA JPL Solar System Dynamics
+#Solar System - Rocky Planets and Sun
+#Date: 04-10-2020 
+#
+#i	mass (Mearth)     initial_position_x (AU)      initial_position_y (AU)      initial_position_z (AU)      initial_velocity_x (AU/day)  initial_velocity_y (AU/day)  initial_velocity_z (AU/day)
+0	332946            -6.35892446e-03        	  6.23757005e-03        	9.65534402e-05       	     -7.072673199e-06       	   -5.37368194e-06       	  2.17845370e-07
+1	0.055             -3.82807973e-01        	  4.23031356e-02        	3.75758339e-02       	     -8.537766759e-03       	   -2.68035107e-02       	 -1.40708234e-03
+2	0.815             -6.97306925e-01        	  2.01159991e-01        	4.26433363e-02       	     -5.598419603e-03       	   -1.95644292e-02        	  5.44601880e-05
+3	1.000              5.19606198e-01        	  8.42708722e-01        	5.77453083e-05       	     -1.485798609e-02        	    9.08481178e-03        	  3.54758670e-07       
+4	0.107              1.06609871e+00        	  9.91020233e-01              -5.57504580e-03       	     -8.939101572e-03        	    1.14949933e-02        	  4.60338508e-04     
